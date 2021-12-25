@@ -30,7 +30,7 @@ context('My First Test', () => {
 
   it('shows the nav links on hover', () => {
     cy.get('.dropdown-toggle').trigger('mouseover')
-    cy.get('.dropdown-menu').should('be.visible')
+    cy.get('.dropdown-menu').should('not.be.visible')
   })
 
   it('sets and gets a token from local storage', () => {
@@ -71,7 +71,7 @@ context('My First Test', () => {
   })
 
   it('renders the correct h1 text', () => {
-    cy.get('h1').should('contain.text', 'Kitchen Sink')
+    cy.get('h1').should('contain.text', 'Actions')
   })
 
   it('renders a paragraph under the h1', () => {
